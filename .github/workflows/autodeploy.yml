@@ -36,7 +36,8 @@ jobs:
         run:  docker push ${{ secrets.DOCKER_USER }}/web-app:latest
 
   deploy:
-    runs-on:  ubuntu-latest
+    runs-on: ubuntu-latest
+    needs: build
 
     steps: # EC2에 접속하기(SSH)
       - name: SSH로 EC2 접속하기
