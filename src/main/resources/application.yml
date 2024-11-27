@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: cicdtest-3
+
+  datasource:
+    driver-class-name:  com.mysql.cj.jdbc.Driver
+
+    url: ${MY_DATA_SOURCE}
+    username: ${MY_DATA_USERNAME}
+    password: ${MY_DATA_PASSWORD}
+
+  # jpa-hibernate configuration
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        use_sql_comments: true
+        hbm2ddl:
+          auto: update
