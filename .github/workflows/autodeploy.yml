@@ -30,7 +30,7 @@ jobs:
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKER_USER }}
-          password: ${{ secrets.DOCER_PASSWORD }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: dockerhub 에 생성한 이미지 push
         run:  docker push ${{ secrets.DOCKER_USER }}/web-app:latest
